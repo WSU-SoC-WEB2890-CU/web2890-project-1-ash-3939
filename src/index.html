@@ -13,18 +13,196 @@
 
   <body>
     <!-- Your HTML goes here -->
+    <!-- Navbar-->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-light sticky-top" data-bs-theme="light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="./images/logo.svg" alt="Logo" height="24" class="d-inline-block align-text-top" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">How It Works</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Testimonials</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">FAQs</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--Hero Section-->
+    <section id="hero" class="hero">
+      <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+          <div class="col-lg-7 text-center text-lg-start">
+            <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">We buy "any" car.</h1>
+            <p class="col-lg-10 fs-4">Get Your Free Online Valuation Now!</p>
+          </div>
+          <div class="col-md-10 mx-auto col-lg-5">
+            <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="floatingInput" placeholder="4Y1SL65848Z411439" />
+                <label for="floatingInput">VIN Number</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="floatingInput" placeholder="2001" />
+                <label for="floatingInput">Year</label>
+              </div>
+              <div class="form-floating mb-3">
+                <select name="Make" class="form-select" id="floatingInput">
+                  <option value="1">Abarth</option>
+                  <option value="2">Acura</option>
+                  <option value="3">Alfa Romeo</option>
+                  <option value="4">Aston Martin</option>
+                  <option value="5">Audi</option>
+                  <option value="6">Bentley</option>
+                  <option value="7">BMW</option>
+                  <option value="8">Buick</option>
+                  <option value="9">Cadillac</option>
+                  <option value="10">Chevrolet</option>
+                  <option value="11">Chrysler</option>
+                  <option value="12">Citroen</option>
+                  <option value="13">Dacia</option>
+                  <option value="14">Dodge</option>
+                  <option value="15">Ferrari</option>
+                  <option value="16">Fiat</option>
+                  <option value="17">Ford</option>
+                  <option value="18">GMC</option>
+                  <option value="19">Honda</option>
+                  <option value="20">Hummer</option>
+                  <option value="21">Hyundai</option>
+                  <option value="22">Infiniti</option>
+                  <option value="23">Isuzu</option>
+                  <option value="24">Jaguar</option>
+                  <option value="25">Jeep</option>
+                  <option value="26">Kia</option>
+                  <option value="27">Lamborghini</option>
+                  <option value="28">Lancia</option>
+                  <option value="29">Land Rover</option>
+                  <option value="30">Lexus</option>
+                  <option value="31">Lincoln</option>
+                  <option value="32">Lotus</option>
+                  <option value="33">Maserati</option>
+                  <option value="34">Mazada</option>
+                  <option value="35">Mercedes-Benz</option>
+                  <option value="36">Meercury</option>
+                  <option value="37">Mini</option>
+                  <option value="38">Mitsubishi</option>
+                  <option value="39">Nissan</option>
+                  <option value="40">Opel</option>
+                  <option value="41">Peugeot</option>
+                  <option value="42">Pontiac</option>
+                  <option value="43">Porsche</option>
+                  <option value="44">Ram</option>
+                  <option value="45">Renault</option>
+                  <option value="46">Saab</option>
+                  <option value="47">Saturn</option>
+                  <option value="48">Scion</option>
+                  <option value="49">Seat</option>
+                  <option value="50">Skoda</option>
+                  <option value="51">Smart</option>
+                  <option value="52">SsangYong</option>
+                  <option value="53">Subaru</option>
+                  <option value="54">Suzuki</option>
+                  <option value="55">Tesla</option>
+                  <option value="56">Toyota</option>
+                  <option value="57">Volkswagen</option>
+                  <option value="58">Volvo</option>
+                  <option value="59">Wiesmann</option>
+                </select>
+                <label for="floatingInput">Select Make</label>
+              </div>
+              <div class="form-floating mb-3">
+                <select name="Model" class="form-select" id="floatingInput">
+                  <option value="1">A3</option>
+                  <option value="2">Ascent</option>
+                  <option value="3">Giulia</option>
+                </select>
+                <label for="floatingInput">Select Model</label>
+              </div>
+              <button class="w-100 btn btn-lg btn-primary" type="submit">Get an Offer</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="how-it-works" class="how-it-works">
+      <div class="container">
+        <h2>How It Works</h2>
+        <p>
+          The process of selling your car with Cardeal is easy and straightforward. Our employees will keep you informed
+          so you will understand what happens next.
+        </p>
+        <div class="steps row g-4 row-cols-1 row-cols-lg-3" id="steps">
+          <div class="col">
+            <div
+              class="icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
+            >
+              <i class="bi bi-input-cursor-text"></i>
+            </div>
+            <h3>Step 1</h3>
+            <p>
+              Fill out a form that provides accurate information about your car (i.e., VIN, year, make, model, mileage,
+              condition of car, accidents
+            </p>
+          </div>
+          <div class="col">
+            <h3>Step 2</h3>
+            <p>Get an instant offer on your car that is good for 7 days.</p>
+          </div>
+          <div class="col">
+            <h3>Step 3</h3>
+            <p>Provide access to car. Deliver car to closest cardeal location or have us come get it.</p>
+          </div>
+          <div class="col">
+            <h3>Step 4</h3>
+            <p>Provide title proving your ownership of the vehicle.</p>
+          </div>
+          <div class="col">
+            <h3>Step 5</h3>
+            <p>Cardeal will inspect your car to verify its condition.</p>
+          </div>
+          <div class="col">
+            <h3>Step 6</h3>
+            <p>
+              If everything checks out, you can decide if you want to accept the offer. You can go with cash or apply
+              the money to a trade in.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="advantages" class="advantages"></section>
+    <section id="testimonials" class="testimonials"></section>
+    <section id="selling-point" class="selling-point"></section>
+    <section id="reacent-purchases" class="reacent-purchases"></section>
+    <section id="faq" class="faq"></section>
+    <footer class="footer"></footer>
+
     <h1 class="display-2 text-center my-5 py-5 mx-auto w-75">
-      <span>
-        WEB 2890:&nbsp;
-        <i class="bi bi-filetype-html text-primary"></i>/ <i class="bi bi-filetype-css text-danger"></i>/
-        <i class="bi bi-filetype-js text-success"></i>
-      </span>
-      <span class="d-block pt-5">
-        <img src="images/logo.svg" alt="logo horizontal" />
-      </span>
-      <span class="d-block py-5">
-        Project 1: The <span class="bg-dark text-light px-5 fw-bold">CarDeal</span> project
-      </span>
       <a href="_contents.html" class="link-primary">Link to the Contents file</a>
     </h1>
 
