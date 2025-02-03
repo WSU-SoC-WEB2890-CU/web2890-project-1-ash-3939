@@ -1,3 +1,95 @@
 /* Your styles go here */
-@import "bootstrap/scss/bootstrap.scss";
+//imports
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+@import "custom";
+@import "./sections/header";
+@import "./sections/hero";
+@import "./sections/how-it-works";
+@import "./sections/advantages";
+@import "./sections/testimonials";
+@import "./sections/selling-point";
+@import "./sections/recent-purchases";
+@import "./sections/faq";
+@import "./sections/footer";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+//theme color changes
+$custom-theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+);
+
+//font changes
+$font-family-sans-serif: "Oswald", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
+  "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+// Merge the maps
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+@import "bootstrap/scss/bootstrap"; //@import "bootstrap/scss/bootstrap.scss";
 @import "bootstrap-icons/font/bootstrap-icons.css";
+
+button,
+.btn {
+  border: none;
+  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    transform: scale(1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #333;
+  }
+
+  .card-text {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .btn {
+    color: $primary;
+    border-radius: 5px;
+
+    &:hover {
+      color: #0056b3;
+    }
+  }
+}
+
+p {
+  font-family: "Source+Serif+4";
+}

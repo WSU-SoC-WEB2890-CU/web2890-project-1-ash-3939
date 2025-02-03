@@ -1,0 +1,107 @@
+@import "../custom";
+// Custom styles for the 'How It Works' section
+#how-it-works {
+  background-color: white; // Light background color for the section
+  .container {
+    max-width: 1200px; // Optional, control the max width for larger screens
+  }
+
+  .section-heading {
+    text-align: center;
+    font-size: 2.5rem; // Increase font size for headings
+    font-weight: bold;
+    color: $dark; // Dark text color
+    margin-bottom: 20px;
+  }
+
+  .section-description {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555; // Slightly lighter text for description
+    margin-bottom: 30px;
+  }
+
+  .steps {
+    display: flex; // Use flexbox to align the cards
+    flex-wrap: wrap; // Allow wrapping on smaller screens
+    justify-content: space-between;
+    gap: 30px; // Space between the cards (default for larger screens)
+
+    .col {
+      display: flex;
+      flex-direction: column; // Stack content vertically
+      flex: 1;
+      min-width: 280px; // Minimum width for each column
+      max-width: calc(33.333% - 30px); // Control width for 3 cards per row
+      height: 100%; // Ensure the column fills the available space
+    }
+
+    .step-card {
+      display: flex;
+      flex-direction: column; // Stack icon, heading, and paragraph vertically
+      justify-content: space-between; // Space out the content
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 30px;
+      height: 100%; // Make sure all cards take up the full height
+      min-height: 300px; // Ensure all cards have a minimum height
+      box-sizing: border-box; // Include padding and border in height calculation
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-10px); // Lift the card on hover
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); // Add subtle shadow for hover effect
+      }
+
+      .icon {
+        background-color: $secondary; // Custom icon background
+        color: #fff; // Icon color
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: $dark;
+      }
+
+      p {
+        font-size: 1rem;
+        color: black;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .section-heading {
+      font-size: 2rem;
+    }
+
+    .section-description {
+      font-size: 1.1rem;
+    }
+
+    .steps {
+      .col {
+        .step-card {
+          padding: 20px; // Reduced padding for smaller screens
+        }
+      }
+
+      gap: 0; // Remove the gap between cards on mobile screens
+    }
+
+    .steps .col {
+      max-width: 100%; // Ensure each card takes up the full width on mobile
+    }
+  }
+}

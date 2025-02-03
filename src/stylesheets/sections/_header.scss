@@ -1,0 +1,60 @@
+// Custom Navbar Styles
+@import "./custom";
+// Custom Navbar Styles
+.custom-navbar {
+  background-color: $light; // Dark background color
+  box-shadow: 0px 3px 15px #cecaa7;
+
+  .navbar-brand {
+    img {
+      height: 30px; // Make logo a bit bigger
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+    &:focus {
+      box-shadow: none; // Remove focus outline
+    }
+  }
+  .navbar-collapse {
+    justify-content: flex-start; // Align nav items to the left by default
+  }
+
+  .nav-link {
+    color: $dark; // Make text white
+    font-size: 1.1rem; // Increase font size for readability
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #cecaa7; // Slightly lighter text on hover
+    }
+  }
+
+  .navbar-nav {
+    margin-left: 0; // Align items to the left for large screens
+  }
+
+  // For larger screens, align items to the left
+  @media (min-width: 992px) {
+    .navbar-collapse {
+      justify-content: flex-start; // Align navbar items to the left
+    }
+
+    .navbar-nav {
+      margin-left: 0; // Remove right margin
+    }
+  }
+
+  // Responsive design: For smaller screens
+  @media (max-width: 991px) {
+    .navbar-nav {
+      text-align: center;
+    }
+
+    .nav-link {
+      padding: 12px; // Make links larger for easier tap
+    }
+  }
+}

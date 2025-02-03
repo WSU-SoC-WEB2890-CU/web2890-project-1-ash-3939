@@ -1,0 +1,105 @@
+@import "../custom";
+#recent-purchases {
+  .container {
+    max-width: 1200px; // Ensures the container width is not too wide on large screens
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $dark;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: #666;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .recent-card {
+    .card {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #f9f9f9;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-img-top {
+        object-fit: cover;
+        height: 200px; // ensures image has a fixed height
+      }
+
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.5rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn {
+        background-color: $primary;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        font-weight: bold;
+        color: white;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #567298;
+        }
+      }
+
+      // Hover effect for card body (change background color slightly on hover)
+      &:hover .card-body {
+        background-color: #cecaa7;
+      }
+    }
+  }
+
+  // Ensure cards are of equal height
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  // Responsive breakpoints
+  @media (max-width: 1199px) {
+    .row {
+      .col {
+        flex: 0 0 48%; // Two cards per row on medium screens
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .row {
+      .col {
+        flex: 0 0 100%; // One card per row on small screens
+      }
+    }
+  }
+
+  // For large screens, three cards per row
+  @media (min-width: 1200px) {
+    .row {
+      .col {
+        flex: 0 0 31%; // Three cards per row on large screens
+      }
+    }
+  }
+}

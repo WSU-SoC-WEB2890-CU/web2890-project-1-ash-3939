@@ -1,0 +1,56 @@
+@import "../custom";
+
+.custom-footer {
+  background-color: $light; // Soft light background
+  color: $dark; // Standard Bootstrap dark color
+
+  h5 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .tel {
+    &:hover {
+      color: $secondary; // Blue color on hover
+    }
+  }
+
+  a.footer-link {
+    color: $dark;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $secondary; // Blue color on hover
+    }
+  }
+
+  .social-link {
+    font-size: 1.5rem; // Increase icon size
+    color: $dark;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $secondary; // Blue color on hover
+    }
+  }
+
+  address {
+    font-style: normal;
+    line-height: 1.5;
+  }
+
+  .list-unstyled {
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .text-center {
+    text-align: center;
+
+    @media (min-width: 768px) {
+      text-align: left;
+    }
+  }
+}
