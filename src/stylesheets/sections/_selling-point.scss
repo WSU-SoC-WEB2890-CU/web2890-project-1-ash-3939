@@ -1,11 +1,11 @@
 @import "../custom";
 #main-selling-point {
-  background: url("../../images/selling-point-image.jpg") no-repeat center center/cover; // Set your image path here
+  //background: url("../../images/selling-point-image.jpg") no-repeat center center/cover; // Set your image path here
   color: #fff; // Make text white for better contrast on the background
   position: relative; // To create a stacking context for the overlay
   padding-top: 100px; // Adds space on top to ensure content is not too close to the edge
   padding-bottom: 100px; // Similar padding for the bottom
-  height: px;
+  height: 400px;
 
   // Adding a dark overlay to improve text visibility on the image background
   &::before {
