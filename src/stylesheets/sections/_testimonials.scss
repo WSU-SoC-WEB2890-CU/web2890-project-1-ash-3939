@@ -1,0 +1,125 @@
+@import "../custom";
+$carousel-control-color: $secondary;
+
+#testimonials {
+  background-color: white;
+  padding: 4rem 1rem;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $dark;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 2.5rem;
+  }
+
+  .carousel {
+    position: relative;
+
+    .carousel-inner {
+      .carousel-item {
+        transition: transform 0.8s ease, opacity 0.8s ease;
+
+        .testimonial-card {
+          background-color: #ffffff;
+          border: 1px solid #e0e0e0;
+          border-radius: 15px;
+          padding: 2rem;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+          &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+          }
+
+          .blockquote {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #2c3e50;
+            line-height: 1.6;
+
+            p {
+              margin-bottom: 1rem;
+            }
+          }
+
+          .blockquote-footer {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+
+            strong {
+              font-weight: bold;
+              color: #2c3e50;
+            }
+          }
+
+          .profile-info {
+            display: flex;
+            align-items: center;
+            margin-top: 1.5rem;
+
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              margin-right: 1rem;
+              box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .profile-details {
+              display: flex;
+              flex-direction: column;
+
+              .name {
+                font-weight: bold;
+                font-size: 1rem;
+                color: #34495e;
+              }
+
+              .position {
+                font-size: 0.8rem;
+                color: #95a5a6;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Positioning controls outside of text area
+    .carousel-control-prev,
+    .carousel-control-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 5;
+      width: 50px;
+      height: 50px;
+      color: $secondary;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+
+    .carousel-control-prev {
+      left: -60px; // Move outside the carousel
+    }
+
+    .carousel-control-next {
+      right: -60px; // Move outside the carousel
+    }
+  }
+}

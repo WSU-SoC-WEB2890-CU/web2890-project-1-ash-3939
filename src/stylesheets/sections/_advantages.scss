@@ -1,0 +1,81 @@
+@import "../custom";
+.advantages-section {
+  background-color: white; // A light gray background for the section
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $dark;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+  }
+
+  .advantages-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; // 3 columns on larger screens
+    gap: 30px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr; // Single column layout for small screens
+    }
+
+    .advantage-item {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .advantage-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        margin-right: 20px;
+        flex-shrink: 0;
+      }
+
+      .advantage-content {
+        h3 {
+          font-size: 1.5rem;
+          color: $dark;
+          margin-bottom: 15px;
+        }
+
+        p {
+          font-size: 1rem;
+          color: black;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+
+  // Hover effect for the advantage items
+  .advantage-item:hover {
+    cursor: pointer;
+  }
+}
